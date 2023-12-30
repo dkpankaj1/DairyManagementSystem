@@ -16,7 +16,7 @@ class ProfileController extends Controller
         return $this->sendSuccess(
             "user profile",
             [
-                "user" => $request->user()
+                "user" => new UserResource($request->user())
             ],
             200
         );
