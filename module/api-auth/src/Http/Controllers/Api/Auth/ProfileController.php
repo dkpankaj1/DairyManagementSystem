@@ -37,7 +37,7 @@ class ProfileController extends Controller
 
         } catch (\Exception $e) {
 
-            $this->sendhttpResponseException('profile update failed.',['error' =>$e->getMessage()],400);
+            $this->sendHttpResponseException('profile update failed.',['error' =>$e->getMessage()],400);
 
         }
     }
