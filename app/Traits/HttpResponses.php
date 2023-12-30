@@ -36,7 +36,7 @@ trait HttpResponses
         );
     }
 
-    public function sendhttpResponseException($message = null, $exception = [], $code = 401)
+    public function sendHttpResponseException($message = null, $exception = [], $code = 401)
     {
         $response = [
             "status" => $code,
