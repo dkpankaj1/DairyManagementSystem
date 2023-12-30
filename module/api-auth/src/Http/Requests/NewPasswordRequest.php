@@ -36,6 +36,6 @@ class NewPasswordRequest extends FormRequest
     }
     public function failedValidation(\Illuminate\Contracts\Validation\Validator $validator)
     {
-        $this->sendhttpResponseException('validation error.', $validator->errors());
+        $this->sendHttpResponseException('validation error.', $validator->errors());
     }
 }

@@ -29,7 +29,7 @@ class LoginRequest extends FormRequest
     }
 
     public function failedValidation(\Illuminate\Contracts\Validation\Validator $validator){
-        return $this->sendhttpResponseException('validation error.', $validator->errors());
+        return $this->sendHttpResponseException('validation error.', $validator->errors());
     }
 
 
@@ -39,7 +39,7 @@ class LoginRequest extends FormRequest
 
         if (! Auth::attempt( ['email' => $this->email,'password' => $this->password,'status' => 1], $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
-            $this->sendhttpResponseException("login errors",['email' => trans('auth.failed')],401);
+            $this->sendHttpResponseException("login errors",['email' => trans('auth.failed')],401);
         }
 
         RateLimiter::clear($this->throttleKey());
