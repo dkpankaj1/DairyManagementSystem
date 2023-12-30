@@ -23,13 +23,7 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
             'status' => 1
         ]);
-
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        
         \App\Models\Rider::factory(10)->create();
     }
 }
