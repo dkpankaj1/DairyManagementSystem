@@ -1,6 +1,7 @@
 <?PHP
 
 namespace App\Traits;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 trait HttpResponses
 {
@@ -33,5 +34,16 @@ trait HttpResponses
             ],
             $code
         );
+    }
+
+    public function sendhttpResponseException($message = null, $exception = [], $code = 401)
+    {
+        $response = [
+            "status" => $code,
+            "message" => $message,
+            "error" => $exception
+        ];
+        
+        throw new HttpResponseException(response()->json($response,$code));
     }
 }
