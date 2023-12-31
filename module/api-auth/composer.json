@@ -1,0 +1,19 @@
+{
+    "name": "cortexitsolution/api-auth",
+    "description": "this package provide auth system for apis",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cortexitsolution\\ApiAuth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dipankar kumar pankaj",
+            "email": "34406638+dkpankaj1@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
