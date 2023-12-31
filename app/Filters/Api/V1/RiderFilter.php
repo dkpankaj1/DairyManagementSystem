@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filters\API\V1;
+namespace App\Filters\Api\V1;
 use App\Filters\QueryFilters;
 class RiderFilter extends QueryFilters
 {

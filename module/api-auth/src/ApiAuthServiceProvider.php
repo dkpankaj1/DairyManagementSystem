@@ -10,11 +10,11 @@ class ApiAuthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . './routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/api.php');
 
-        $this->loadMigrationsFrom(__DIR__ . './database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
-        $this->loadTranslationsFrom(__DIR__.'./lang','api-auth');
+        $this->loadTranslationsFrom(__DIR__.'/lang','api-auth');
 
         $this->registerEvents();
     }
